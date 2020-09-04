@@ -1,0 +1,19 @@
+{
+  "name": "assignment_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cypress": "^5.0.0",
+    "cypress-commands": "^1.1.0",
+    "exceljs": "^4.1.1",
+    "mocha": "^8.1.2"
+  }
+}
