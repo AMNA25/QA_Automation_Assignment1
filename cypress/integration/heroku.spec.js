@@ -68,15 +68,15 @@ describe('Herokuapp', () => {
             cy.get('form > :nth-child(2) > .MuiInputBase-root').type(`${type5}`) //writes '5. Read the first rule again'
         })
         cy.fixture('input.json').then((input)=>{
-        cy.get('.jss656 > .MuiInputBase-root > .MuiInputBase-input').type(input[6].value)
+        cy.get('.jss656 > .MuiInputBase-root > .MuiInputBase-input').type(input[6].value) //phone number
        
-        cy.get('.jss686 > :nth-child(2) > .MuiInputBase-root > .MuiInputBase-input').type(input[7].value)
+        cy.get('.jss686 > :nth-child(2) > .MuiInputBase-root > .MuiInputBase-input').type(input[7].value)  //address
         
-        cy.get('.MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type(input[8].value +'{enter}')
+        cy.get('.MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type(input[8].value +'{enter}')  //tag1
        
-        cy.get('.MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type(input[9].value +'{enter}')
+        cy.get('.MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type(input[9].value +'{enter}') //tag2
       
-        cy.get('.MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type(input[10].value+'{enter}')
+        cy.get('.MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').type(input[10].value+'{enter}') //tag3
         cy.get('.MuiButton-contained').click()
         cy.get('nav > :nth-child(1)').click()
     })})
