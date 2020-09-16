@@ -21,6 +21,7 @@ it ('cast members info', ()=>{
        
 const texts1=[]
 
+//Iterates over each cast member name in the list and pushes names in the array
 cy.get(`#fullcredits_content > table.cast_list > tbody > tr:nth-child(n) > td.character > a:nth-child(1)`).each(($el) => {
     texts1.push($el.text());
 })

@@ -105,20 +105,6 @@ module.exports = (on, config) => {
     }
   })
   
-  /**var worksheet1= workbook.Sheets["Series Cast"];
-  console.log(worksheet1);
-  dataFile=xlsx.readFile('castInfo.json');
-  console.log(dataFile)
-  xlsx.utils.sheet_add_json(worksheet1,JSON.parse(dataFile));
-  xlsx.writeFile(workbook, 'qaautomation1.xlsx');
-  /**var cellA2value= 'A2';
-  var cellA2=worksheet1[cellA2value];
-  var cellA2_value=(cellA2.v);
-  console.log(cellA2_value);
-  var worksheet3= workbook.Sheets["Series Cast"];
-console.log(worksheet3)
-dataFile=xlsx.readFile('name.txt');
-console.log(dataFile)*/
      
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
