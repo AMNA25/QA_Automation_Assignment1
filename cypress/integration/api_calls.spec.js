@@ -8,7 +8,7 @@ it('This test shows GET response', ()=>{
     .then((response)=>{
         expect(response.status).to.eq(201)
         expect(response.duration).to.be.lessThan(1000)
-        expect(parseInt(response.headers[`content-length`])).to.be.lessThan(2048)
+        expect(parseInt(response.headers['content-length'])).to.be.lessThan(2048)
     })
 })
 
@@ -25,7 +25,7 @@ it('This test shows POST request of https://emumba-test.herokuapp.com/user',()=>
     .then((response) => {                                          //Response Contain
       expect(response.status).to.eq(200)
       expect(response.duration).to.be.lessThan(1000)
-      expect(parseInt(response.headers[`content-length`])).to.be.lessThan(2048)
+      expect(parseInt(response.headers['content-length'])).to.be.lessThan(2048)
       expect(response.body).to.have.property('first_name') 
       expect(response.body).to.have.property('last_name')
       expect(response.body).to.have.property('plan')
@@ -45,7 +45,7 @@ it('This test shows POST request of https://emumba-test.herokuapp.com/user/login
     .then((response)=>{                                                 //Response Contain
         expect(response.status).to.eq(200)
         expect(response.duration).to.be.lessThan(2000) 
-        expect(parseInt(response.headers[`content-length`])).to.be.lessThan(2048)
+        expect(parseInt(response.headers['content-length'])).to.be.lessThan(2048)
         expect(response.body).to.have.property('email')
         expect(response.body).to.have.property('first_name')
         expect(response.body).to.have.property('last_name')
