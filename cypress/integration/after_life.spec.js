@@ -3,6 +3,7 @@ import linkPage from '../../pageObjects/afterLife/linkPage';
 import afterLifeLinkAndInfo from '../support/gOogle/afterLifeLinkAndInfo';
 import goToGoogle from '../support/gOogle/goToGoogle'
 import searchAfterLife from '../support/gOogle/searchAfterLife';
+import writeCastInfo from '../../Functions/writeCastInfo'
 
 describe('After Life', function(){
 
@@ -11,8 +12,8 @@ it ('Search the cast', function(){
     goToGoogle(usersData[0].value)
     searchAfterLife(usersData[1].value)
     afterLifeLinkAndInfo(usersData[2].value,'See full cast')
-    linkPage.object;
-    //writeCastInfo()
+   // linkPage.object;
+    writeCastInfo()
     })
 })
 })

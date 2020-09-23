@@ -14,30 +14,25 @@ class linkPage{
         return cy.get(':nth-child(n) > td.character > a.toggle-episodes')
     }
     get nameList(){
-        const arr1=[]
-        this.names_link.each(($el) => {
-        arr1.push($el.text().split('\n'))});
+        var arr1=[]
+        this.names_link.then((el) => {
+        arr1.push(el.text().split('\n'))});
+        cy.log(arr1)
         return arr1;
     }
     get screenNameList(){
-        const arr2=[]
-        this.screenNames_link.each(($el) => {
-        arr2.push($el.text())});
+        var arr2=[]
+        this.screenNames_link.then((el) => {
+        arr2.push(el.text())});
         return arr2;
     }
     get appearanceList(){
-        const arr3=[]
-        this.appearance_link.each(($el) => {
-        arr3.push($el.text())});
+        var arr3=[]
+        this.appearance_link.then((el) => {
+        arr3.push(el.text())});
         return arr3;
     }
-    get object(){
-        const data=[]
-        cy.wrap(this.nameList).each(($el, index)=>{
-        data.push({'Name':this.nameList[1], 'Screen Name':this.screenNameList[index], 'Appearance':this.appearanceList[index]}).then()
-        cy.log(data)
-    }
         
-)}}
+}
 
 module.exports=new linkPage();
